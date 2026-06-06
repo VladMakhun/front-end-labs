@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3-4: CRUD та HTTP-запити</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="notification" class="hidden"></div>
+
+    <div class="container">
+        <h1>Керування користувачами (CRUD)</h1>
+        
+        <section class="form-section">
+            <h2>Створити нового користувача</h2>
+            <form id="create-user-form">
+                <input type="text" id="add-firstname" placeholder="First Name" required>
+                <input type="text" id="add-lastname" placeholder="Last Name" required>
+                <input type="number" id="add-age" placeholder="Age" required min="1" max="120">
+                <input type="email" id="add-email" placeholder="Email" required>
+                <button type="submit" class="btn-success">Create User</button>
+            </form>
+        </section>
+
+        <section class="controls-section">
+            <button id="btn-get-users" class="btn-primary">Get users</button>
+            
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search by name...">
+                <button id="btn-search" class="btn-secondary">Search</button>
+            </div>
+        </section>
+
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+        
+        <div id="users-container" class="users-grid"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
